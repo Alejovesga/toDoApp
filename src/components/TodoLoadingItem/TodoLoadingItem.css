@@ -1,0 +1,66 @@
+.container {
+  background: white;
+  border-radius: 10px;
+  border: 2px solid #202329;
+  margin: 0 auto;
+  height: 64px;
+  width: 50%;
+  max-width: 500px;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.background {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: preloadAnimation;
+  animation-timing-function: linear;
+  background: #f6f6ef;
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  display: flex;
+  height: 50%;
+  width: 95%;
+}
+
+@keyframes preloadAnimation {
+  0% {
+    background-position: -480px;
+  }
+  100% {
+    background-position: 480px;
+  }
+}
+
+.image {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+}
+
+.bar {
+  height: 10px;
+  background: transparent;
+  position: relative;
+  width: 100%;
+}
+
+.bar::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 10px;
+  height: 40px;
+  background: white;
+}
+
+.bar.medium::after {
+  width: 60%;
+}
+
+.bar.small::after {
+  width: 30%;
+}

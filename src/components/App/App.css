@@ -1,0 +1,12 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  background: #07051a;
+}
+
+p {
+  text-align: center;
+  color: bisque;
+}
