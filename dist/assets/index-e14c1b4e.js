@@ -9390,7 +9390,7 @@ function np() {
   return Me("div", {
     className: "Empty",
     children: [
-      T("img", { src: "../toDoApp/list.png", className: "Empty-list" }),
+      T("img", { src: "../list.png", className: "Empty-list" }),
       T("p", { className: "Empty-text", children: "No hay tareas pendientes" }),
       T("p", {
         className: "Empty-sub-text",
@@ -9403,7 +9403,7 @@ function rp() {
   return Me("div", {
     className: "Error",
     children: [
-      T("img", { src: "../toDoApp/bee.png", className: "Error-bee" }),
+      T("img", { src: "../bee.png", className: "Error-bee" }),
       T("p", { className: "Error-text", children: "¡Es una abeja!" }),
       T("p", {
         className: "Error-sub-text",
