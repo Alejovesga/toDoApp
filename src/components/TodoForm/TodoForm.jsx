@@ -1,11 +1,9 @@
 import React from "react";
 import "./TodoForm.css";
-import { TodoContext } from "../TodoContext/TodoContext";
+import { TodoFormUI } from "./TodoFormUI";
 
-export default function TodoForm() {
+export default function TodoForm({ addTodo, setOpenModal }) {
   const [newTodoValue, setNewTodoValue] = React.useState("");
-
-  const { addTodo, setOpenModal } = React.useContext(TodoContext);
 
   const onChange = (event) => {
     setNewTodoValue(event.target.value);
@@ -23,26 +21,12 @@ export default function TodoForm() {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <label>Escribe tu nueva tarea</label>
-      <textarea
-        value={newTodoValue}
-        onChange={onChange}
-        placeholder="Crear tarea"
-      />
-      <div className="TodoForm-buttonContainer">
-        <button
-          type="button"
-          className="TodoForm-button TodoForm-button--cancel"
-          onClick={onCancel}
-        >
-          Cancelar
-        </button>
-        <button type="submit" className="TodoForm-button TodoForm-button--add">
-          Guardar
-        </button>
-      </div>
-    </form>
+    <TodoFormUI
+      onSubmit={onSubmit}
+      onChange={onChange}
+      onCancel={onCancel}
+      newTodoValue={newTodoValue}
+    />
   );
 }
 

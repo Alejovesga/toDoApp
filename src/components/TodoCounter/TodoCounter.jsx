@@ -1,11 +1,8 @@
 import React from "react";
 import "./TodoCounter.css";
 import { FaList } from "react-icons/fa";
-import { TodoContext } from "../TodoContext/TodoContext";
 
-function TodoCounter() {
-  const { completedTodos, totalTodos } = React.useContext(TodoContext);
-
+function TodoCounter({ completedTodos, totalTodos }) {
   return (
     <h2 className="TodoCounter">
       <FaList className="TodoCounterIcon" />
